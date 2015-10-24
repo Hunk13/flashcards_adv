@@ -4,14 +4,14 @@ describe Card do
   it 'create card with empty original text' do
     card = Card.create(original_text: '', translated_text: 'house', user_id: 1,
                        block_id: 1)
-    expect(card.errors[:original_text]).to include('Необходимо заполнить поле.')
+    expect(card.errors[:original_text]).to include('Заполните поле.')
   end
 
   it 'create card with empty translated text' do
     card = Card.create(original_text: 'дом', translated_text: '', user_id: 1,
                        block_id: 1)
     expect(card.errors[:translated_text]).
-        to include('Необходимо заполнить поле.')
+        to include('Заполните поле.')
   end
 
   it 'create card with empty texts' do
@@ -134,14 +134,14 @@ describe Card do
     card = Card.create(original_text: 'дом', translated_text: 'house',
                        block_id: 1)
     expect(card.errors[:user_id]).
-        to include('Ошибка ассоциации.')
+        to include('Заполните поле.')
   end
 
   it 'create card witout block_id' do
     card = Card.create(original_text: 'дом', translated_text: 'house',
                        user_id: 1)
     expect(card.errors[:block_id]).
-        to include('Выберите колоду из выпадающего списка.')
+        to include('Заполните поле.')
   end
 
   it 'check_translation Eng OK levenshtein_distance' do

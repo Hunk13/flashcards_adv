@@ -1,5 +1,5 @@
 class Home::UsersController < Home::BaseController
-  respond_to :html, :xml, :json
+  respond_to :html, :json
 
   def new
     if current_user

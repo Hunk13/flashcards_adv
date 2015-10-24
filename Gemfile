@@ -31,10 +31,12 @@ gem 'http_accept_language'
 gem 'routing-filter'
 gem 'rollbar'
 gem 'newrelic_rpm'
+gem 'responders', '~> 2.0'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'responders', '~> 2.0'
 end
+
+gem "codeclimate-test-reporter", group: :test, require: nil
