@@ -2,20 +2,20 @@ require "rails_helper"
 
 describe Card do
   it "create card with empty original text" do
-    card = Card.create(original_text: ", translated_text: "house", user_id: 1,
+    card = Card.create(original_text: "", translated_text: "house", user_id: 1,
                        block_id: 1)
     expect(card.errors[:original_text]).to include("Заполните поле.")
   end
 
   it "create card with empty translated text" do
-    card = Card.create(original_text: "дом", translated_text: ", user_id: 1,
+    card = Card.create(original_text: "дом", translated_text: "", user_id: 1,
                        block_id: 1)
     expect(card.errors[:translated_text]).
       to include("Заполните поле.")
   end
 
   it "create card with empty texts" do
-    card = Card.create(original_text: ", translated_text: ", user_id: 1,
+    card = Card.create(original_text: " ", translated_text: " ", user_id: 1,
                        block_id: 1)
     expect(card.errors[:original_text]).
       to include("Вводимые значения должны отличаться.")
