@@ -50,7 +50,7 @@ describe "review cards with one block" do
       fill_in "user_translation", with: "RoR"
       click_button "Проверить"
       expect(page).
-          to have_content "Вы ввели не верный перевод. Повторите попытку."
+        to have_content "Вы ввели не верный перевод. Повторите попытку."
     end
 
     it "correct translation" do
@@ -69,7 +69,7 @@ describe "review cards with one block" do
       fill_in "user_translation", with: "hou"
       click_button "Проверить"
       expect(page).
-          to have_content "Вы ввели не верный перевод. Повторите попытку."
+        to have_content "Вы ввели не верный перевод. Повторите попытку."
     end
   end
 
@@ -87,7 +87,7 @@ describe "review cards with one block" do
       fill_in "user_translation", with: "RoR"
       click_button "Проверить"
       expect(page).
-          to have_content "Вы ввели не верный перевод. Повторите попытку."
+        to have_content "Вы ввели не верный перевод. Повторите попытку."
     end
 
     it "correct translation" do
@@ -100,7 +100,7 @@ describe "review cards with one block" do
       fill_in "user_translation", with: "hou"
       click_button "Проверить"
       expect(page).
-          to have_content "Вы ввели не верный перевод. Повторите попытку."
+        to have_content "Вы ввели не верный перевод. Повторите попытку."
     end
 
     it "correct translation distance=1" do
