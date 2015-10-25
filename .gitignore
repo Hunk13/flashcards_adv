@@ -20,4 +20,4 @@ config/application.yml
 public/uploads/
 # Ignore application configuration
 /config/application.yml
-/coverage/
+/coverage
