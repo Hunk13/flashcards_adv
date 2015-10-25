@@ -18,8 +18,8 @@ class Home::OauthsController < Home::BaseController
         redirect_to trainer_path, notice: (t "log_in_is_successful_provider_notice",
                                           provider: provider.titleize)
       rescue
-        redirect_to user_sessions_path, alert: (t "log_out_failed_provider_alert",
-                                              provider: provider.titleize)
+        redirect_to new_user_sessions_path, alert: (t "log_out_failed_provider_alert",
+                                               provider: provider.titleize)
       end
     end
   end

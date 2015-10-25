@@ -6,6 +6,7 @@ describe "password authentication" do
   describe "register" do
     before do
       visit root_path
+      click_link "ru"
     end
 
     it "register TRUE" do
@@ -20,7 +21,7 @@ describe "password authentication" do
 
     it "e-mail FALSE" do
       register("test", "12345", "12345", "Зарегистрироваться")
-      expect(page).to have_content "Не верный формат."
+      expect(page).to have_content "Неверный формат."
     end
 
     it "e-mail has already been taken" do
@@ -45,6 +46,7 @@ describe "password authentication" do
     before do
       create(:user)
       visit root_path
+      click_link "ru"
     end
 
     it "require_login root" do
@@ -78,6 +80,7 @@ describe "password authentication" do
   describe "change language" do
     before do
       visit root_path
+      click_link "en"
     end
 
     it "home page" do
@@ -104,7 +107,7 @@ describe "password authentication" do
       click_link "User profile"
       fill_in "user[password]", with: "12345"
       fill_in "user[password_confirmation]", with: "12345"
-      click_button "Сохранить"
+      click_button "Save"
       expect(page).to have_content "User profile successfully updated."
     end
 
