@@ -10,3 +10,7 @@ before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - bundle exec rake db:migrate
 install: bundle install --jobs=3 --retry=3
+addons:
+  code_climate:
+    repo_token:
+      secure: "ml3nhrSLIknZiNqUAVmjz7xFYLejj23SMmGaARGArnfudUTOX0u1KKg6G/Ep99IIdFcBD2AuxJuLuEXZ8/uaAgxhtWSwCiDWcLFZNBLgDylYkUnaGE/G/l7o/RAbPXo3RbcDoxatSouzLo+gpFmeaTkXHHJXGOoHLOgKxkB5t83345dvbxDWIGLGm9K1WeRa8vzEnuvb/2JQZp5EOPzkYmh4jW3D3sXCmiz04rIl7ejDW/KotKE6T5U8GnfxyJ6GmkB/yR4t9bddAZdp04F5LvW1ZFKOPd94nz6L5KWjty68ylJfwn+LKxWmQCNH781fVgfcAHz60YONT1/RcEWsEtdggZ/prlX9bAYiMdsa+xtEUMve5cwc5WyW4GtjJ3i9e/DL0srtFjxyqktHMc+q/kXmuVjPQn2t4sp9D2HpKSqHhAutcJzoHd0+C1xMwZGOlf0GcETuzmzlacZPfSfYq/y2ttc0NQowtlPQJ5XYHuyf7juULPvCfqdWf3kGwFhJE/0xcRtFxMBMJ81u0P9+l9rZfeaIe6i+qeuaLaWx7vWZLcFO4gK94QCFjHYwSfry+7+ABhT/Iv7sip2/DHk6DrTPKeu9tB8b3+gDVJBqTSoiUOva0Iw2TAD6o6GYozipIz7N5BZSP8+UfEX3af1H/K36AIKuyfwEs7fZFhsTPQk="
