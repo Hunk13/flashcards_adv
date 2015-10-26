@@ -10,7 +10,7 @@ class Home::OauthsController < Home::BaseController
     if @user = login_from(provider)
       redirect_to trainer_path,
                   notice: (t "login_successful_provider_notice",
-                          provider: provider.titleize)
+                  provider: provider.titleize)
     else
       begin
         @user = create_from(provider)
