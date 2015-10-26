@@ -3,7 +3,6 @@ require 'super_memo'
 class Card < ActiveRecord::Base
   belongs_to :user
   belongs_to :block
-  validates :user_id, presence: true
   before_validation :set_review_date_as_now, on: :create
   validate :texts_are_not_equal
   validates :original_text, :translated_text, :review_date, :user_id,
@@ -29,15 +28,6 @@ class Card < ActiveRecord::Base
       sm_hash.merge!({ attempt: [attempt + 1, 5].min })
       update(sm_hash)
       { state: false, distance: distance }
-    end
-  end
-
-  def self.pending_cards_notification
-    users = User.where.not(email: nil)
-    users.each do |user|
-      if user.cards.pending.any?
-        CardsMailer.pending_cards_notification(user.email).deliver
-      end
     end
   end
 

@@ -57,7 +57,7 @@ ru:
   translation_from_misprint_alert: "Вы ввели перевод c опечаткой.
       Ваш вариант: %{user_translation} / Оригинал: %{original_text} /
       Перевод: %{translated_text}. Продолжайте."
-  log_in_is_successful_provider_notice: "Вход из аккаунта %{provider} выполнен успешно."
+  login_successful_provider_notice: "Вход из аккаунта %{provider} выполнен успешно."
   log_out_is_successful_notice: "Выход выполнен успешно."
   log_out_failed_provider_alert: "Вход из аккаунта %{provider.titleize} не выполнен ."
   please_log_in: "Пожалуйста авторизуйтесь."

@@ -44,6 +44,4 @@ Rails.application.configure do
       user_name: ENV['SMTP_SETTINGS_USER_NAME'],
       password: ENV['SMTP_SETTINGS_PASSWORD']
   }
-
-  config.action_mailer.default_url_options = { host: '127.0.0.2:3000', port: 3000 }
 end

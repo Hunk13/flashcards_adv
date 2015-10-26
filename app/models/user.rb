@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   end
 
   def reset_current_block
-    update_attribute(:current_block_id, nil)
+    update_attributes(:current_block_id, nil)
   end
 
   private

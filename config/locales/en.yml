@@ -57,7 +57,7 @@ en:
   translation_from_misprint_alert: "You entered translation from misprint.
       User translation: %{user_translation} / Original text: %{original_text} /
       Translated text: %{translated_text}. Please try again."
-  log_in_is_successful_provider_notice: "Log in of your account %{provider} is successful."
+  login_successful_provider_notice: "Log in of your account %{provider} is successful."
   log_out_is_successful_notice: "Log out is successful."
   log_out_failed_provider_alert: "Log out of your account %{provider} failed."
   please_log_in: "Please log in."
