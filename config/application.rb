@@ -25,10 +25,6 @@ module Flashcards
     config.i18n.default_locale = :ru
     config.i18n.available_locales = [:ru, :en]
 
-    config.action_mailer.default_url_options = {
-      host: ENV["MAILER_APP_HOST"], port: 4000
-    }
-
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       authentication: ENV['SMTP_SETTINGS_AUTHENTICATION'],
@@ -38,5 +34,9 @@ module Flashcards
       user_name: ENV['SMTP_SETTINGS_USER_NAME'],
       password: ENV['SMTP_SETTINGS_PASSWORD']
   }
+    config.action_mailer.default_url_options = {
+      host: ENV["MAILER_APP_HOST"], port: 4000
+    }
+
   end
 end
