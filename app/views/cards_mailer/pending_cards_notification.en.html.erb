@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to <%= I18n.t("flashcards_label") %>, <%= @user.email %></h1>
+    <p>
+      <%= link_to "Go to the website to view cards", root_url %>
+    </p>
+  </body>
+</html>

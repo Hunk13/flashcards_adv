@@ -12,7 +12,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rake'
 gem 'simple_form'
@@ -31,10 +31,13 @@ gem 'http_accept_language'
 gem 'routing-filter'
 gem 'rollbar'
 gem 'newrelic_rpm'
+gem 'responders', '~> 2.0'
+gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'responders', '~> 2.0'
 end
+
+gem "codeclimate-test-reporter", group: :test, require: nil

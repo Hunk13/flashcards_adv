@@ -1,46 +1,71 @@
 en:
-  welcome: 'Welcome.'
-  original_text_label: 'Original'
-  translated_text_label: 'Translation'
-  current_card_label: 'Current card'
-  check_card_button: 'Check'
-  no_review_card_text: 'You have studied all available cards.
-      Expect the date of revision.'
-  registration_label: 'Registration'
-  email_label: 'E-mail'
-  password_label: 'Password'
-  password_confirmation_label: 'Password Confirmation'
-  sing_up_label: 'Sing up'
-  log_in_label: 'Log in'
-  sing_in_label: 'Sing in'
-  all_decks_label: 'All deck'
-  add_deck_label: 'Add deck'
-  all_cards_label: 'All cards'
-  add_card_label: 'Add card'
-  user_profile_label: 'User profile'
-  delete_user_label: 'Delete user'
-  log_out_label: 'Log out'
-  user_created_successfully_notice: 'User created successfully.'
-  please_log_in_alert: 'Please log in.'
-  not_found_alert: 'You have turned to a non-existent record.'
-  log_in_is_successful_notice: 'Login is successful.'
-  not_logged_in_alert: 'Not logged in. Check the input E-mail and Password.'
-  flashcards_label: 'Flashcards'
-  log_in_with_github_label: 'Log in with Github'
-  correct_translation_notice: 'You have entered the correct translation. Keep It Up.'
-  incorrect_translation_alert: 'You entered an invalid translation. Please try again.'
+  welcome: "Welcome."
+  original_text_label: "Original"
+  translated_text_label: "Translation"
+  current_card_label: "Current card"
+  check_card_button: "Check"
+  no_review_card_text: "You have studied all available cards.
+      Expect the date of revision."
+  registration_label: "Registration"
+  email_label: "E-mail"
+  password_label: "Password"
+  password_confirmation_label: "Password Confirmation"
+  sing_up_label: "Sing up"
+  log_in_label: "Log in"
+  sing_in_label: "Sing in"
+  all_decks_label: "All deck"
+  add_deck_label: "Add deck"
+  blocks_edit_title: "Edit deck"
+  blocks_index_name: "Title"
+  blocks_index_make_usual: "Make usual"
+  blocks_index_make_current: "Make current"
+  blocks_index_edit: "Edit"
+  blocks_index_delete: "Delete"
+  blocks_new_title: "New deck"
+  all_cards_label: "All cards"
+  add_card_label: "Add card"
+  cards_edit_title: "Edit card"
+  cards_index_original_text: "Original"
+  cards_index_translated_text: "Translate"
+  cards_index_review_date: "Review date"
+  cards_index_edit_card: "Edit card"
+  cards_index_delete_card: "Delete"
+  cards_index_confirm: "Delete"
+  profile_locale_prompt: "Select locale"
+  profile_locale: "Locale"
+  profile_password: "Password"
+  profile_password_confirmation: "Password confirmation"
+  profile_save: "Save"
+  profile_title: "Profile"
+  user_profile_label: "User profile"
+  user_profile_update: "User profile successfully updated."
+  user_profile_delete: "User successfully deleted."
+  delete_user_label: "Delete user"
+  log_out_label: "Log out"
+  user_created_successfully_notice: "User created successfully."
+  please_log_in_alert: "Please log in."
+  not_found_alert: "You have turned to a non-existent record."
+  log_in_is_successful_notice: "Login is successful."
+  not_logged_in_alert: "Not logged in. Check the input E-mail and Password."
+  flashcards_label: "Flashcards"
+  message_locale: "Select a locale from the drop-down list."
+  log_in_with_github_label: "Log in with Github"
+  mailer_date_review: "There was a revision of the date cards."
+  duplicate_error: "Input values should be different."
+  correct_translation_notice: "You have entered the correct translation. Keep It Up."
+  incorrect_translation_alert: "You entered an invalid translation. Please try again."
   translation_from_misprint_alert: "You entered translation from misprint.
       User translation: %{user_translation} / Original text: %{original_text} /
       Translated text: %{translated_text}. Please try again."
-  log_in_is_successful_provider_notice: "Log in of your account %{provider} is successful."
-  log_out_is_successful_notice: 'Log out is successful.'
+  login_successful_provider_notice: "Log in of your account %{provider} is successful."
+  log_out_is_successful_notice: "Log out is successful."
   log_out_failed_provider_alert: "Log out of your account %{provider} failed."
-  please_log_in: 'Please log in.'
+  please_log_in: "Please log in."
 
   activerecord:
       errors:
         messages:
-          blank: 'Fill out the field.'
-          too_short: 'Short value.'
-          confirmation: 'Values do not match.'
-          taken: 'Not a unique value.'
+          blank: "Fill out the field."
+          too_short: "Short value."
+          confirmation: "Values do not match."
+          taken: "Not a unique value."

@@ -1,9 +1,9 @@
 <table class="table table-hover table-condensed">
   <thead>
   <tr>
-    <th>Оригинал</th>
-    <th>Перевод</th>
-    <th>Пересмотр</th>
+    <th><%= t("cards_index_original_text") %></th>
+    <th><%= t("cards_index_translated_text") %></th>
+    <th><%= t("cards_index_review_date") %></th>
     <th colspan="2"></th>
   </tr>
   </thead>
@@ -12,10 +12,10 @@
     <tr class="table table-hover table-condensed">
       <td><%= card.original_text %></td>
       <td><%= card.translated_text %></td>
-      <td><%= card.review_date.strftime('%d.%m.%Y %H:%M:%S') %></td>
-      <td><%= link_to 'Редактировать', edit_card_path(card) %></td>
-      <td><%= link_to 'Удалить', card, method: :delete,
-                      data: { confirm: 'Удалить запись?' } %></td>
+      <td><%= card.review_date.strftime("%d.%m.%Y %H:%M:%S") %></td>
+      <td><%= link_to t("cards_index_edit_card"), edit_card_path(card) %></td>
+      <td><%= link_to t("cards_index_delete_card"), card, method: :delete,
+                      data: { confirm: t("cards_index_confirm") } %></td>
     </tr>
   <% end %>
   </tbody>
