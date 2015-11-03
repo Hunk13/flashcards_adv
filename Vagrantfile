@@ -7,6 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.berkshelf.enabled = true
   config.vm.hostname = 'flashcards'
   config.vm.box = 'precise64'
+  config.vm.box_url = 'http://files.vagrantup.com/precise64.box'
   config.vm.provider 'virtualbox' do |vb|
     vb.gui = false
     vb.memory = '2048'
@@ -30,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe 'ruby_build'
     chef.add_recipe 'rvm::vagrant'
     chef.add_recipe 'rvm::system'
-    chef.add_recipe 'rvm::user'
+    chef.add_recipe 'rvm::gem_package'
     chef.add_recipe 'nginx'
     chef.json = {
       git: {
@@ -76,16 +77,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         }
       },
       rvm: {
-        user_installs: [
-          {
-            user: "vagrant",
-            default_ruby: "2.0.0",
-            rubies: [
-              "2.0.0-p643"
-            ],
-            global: "2.0.0-p643"
-          }
-        ]
+        default_ruby: 'ruby-2.0.0-p643',
+          vagrant: {
+            system_chef_solo: '/opt/vagrant_ruby/bin/chef-solo'
+          },
+        gem_package: {
+          rvm_string: 'ruby-2.0.0-p643'
+        }
       },
       nginx: {
         dir: "/etc/nginx",
