@@ -33,6 +33,7 @@ gem 'rollbar'
 gem 'newrelic_rpm'
 gem 'responders', '~> 2.0'
 gem 'puma'
+gem 'berkshelf'
 
 group :development, :test do
   gem 'rspec-rails'
