@@ -22,3 +22,4 @@ public/uploads/
 /config/application.yml
 /coverage
 /.vagrant
+.DS_Store
