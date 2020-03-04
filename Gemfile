@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 
-ruby '2.4.0'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '5.2.3'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.21'
-gem 'sass-rails', '~> 4.0.3'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'pg'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'jbuilder'
+gem 'sdoc', group: :doc
 
 gem 'rake'
 gem 'simple_form'
@@ -31,7 +31,7 @@ gem 'http_accept_language'
 gem 'routing-filter'
 gem 'rollbar'
 gem 'newrelic_rpm'
-gem 'responders', '~> 2.0'
+gem 'responders'
 gem 'puma'
 gem 'berkshelf'
 
@@ -41,4 +41,4 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
-gem "codeclimate-test-reporter", group: :test, require: nil
+gem 'simplecov', require: false, group: :test
